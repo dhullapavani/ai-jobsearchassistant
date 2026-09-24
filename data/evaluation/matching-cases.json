@@ -1,0 +1,25 @@
+[
+  {
+    "id": "match-test-001",
+    "description": "Semantic equivalent match",
+    "candidateSkills": ["Spring Boot", "Docker", "REST APIs"],
+    "jobRequirements": ["Microservices", "RESTful services"],
+    "expectedScoreThreshold": 75,
+    "expectedMatchedSkills": ["Microservices", "RESTful services"]
+  },
+  {
+    "id": "match-test-002",
+    "description": "Hard missing skill match",
+    "candidateSkills": ["Java", "MySQL"],
+    "jobRequirements": ["Python", "TensorFlow", "Pandas"],
+    "expectedScoreThreshold": 0,
+    "expectedMissingSkills": ["Python", "TensorFlow", "Pandas"]
+  },
+  {
+    "id": "match-test-003",
+    "description": "Experience boundary match",
+    "candidateExperience": "1-3 years",
+    "jobExperienceLevel": "3-5 years",
+    "expectedPenalty": true
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "tg-test-001",
+    "description": "Verified skill test",
+    "claim": "Strong experience in Java and OOP patterns",
+    "profileVerifiedSkills": ["Java", "Object Oriented Programming"],
+    "expectedStatus": "VERIFIED"
+  },
+  {
+    "id": "tg-test-002",
+    "description": "Unsupported sensitive skill test",
+    "claim": "Architected Kubernetes clusters",
+    "profileVerifiedSkills": ["Java", "Spring Boot"],
+    "profileInferredSkills": ["Docker"],
+    "expectedStatus": "UNSUPPORTED"
+  },
+  {
+    "id": "tg-test-003",
+    "description": "Sensitive field test (years of experience)",
+    "claim": "Bringing 5 years of software engineering experience",
+    "graduationYear": "2025",
+    "expectedStatus": "UNSUPPORTED",
+    "expectedReason": "Candidate graduated in 2025 (Fresher/Entry-level). Claiming 5 years violates truth guard policy."
+  }
+]
